@@ -11,12 +11,12 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "fairMieterstrom für Eigentümer",
   description:
-    "Entdecken Sie fairMieterstrom - die transparente Alternative zu herkömmlichen Mieterstrom-Modellen. Profitieren Sie von fairen Konditionen, vollständiger Transparenz und nachhaltiger Energieversorgung für Ihre Immobilie.",
+    "Mieterstrom neu gedacht. Mit fairMieterstrom schaffen Sie ein lukratives Investment ohne zusätzlichen Aufwand oder bürokratischen Albtraum.",
   generator: "v0.app",
   openGraph: {
     title: "fairMieterstrom für Eigentümer",
     description:
-      "Entdecken Sie fairMieterstrom - die transparente Alternative zu herkömmlichen Mieterstrom-Modellen. Profitieren Sie von fairen Konditionen, vollständiger Transparenz und nachhaltiger Energieversorgung für Ihre Immobilie.",
+      "Mieterstrom neu gedacht. Mit fairMieterstrom schaffen Sie ein lukratives Investment ohne zusätzlichen Aufwand oder bürokratischen Albtraum.",
     url: "https://fairmieterstrom.pure-energy-germany.de",
     siteName: "fairMieterstrom",
     images: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "fairMieterstrom für Eigentümer",
     description:
-      "Entdecken Sie fairMieterstrom - die transparente Alternative zu herkömmlichen Mieterstrom-Modellen. Profitieren Sie von fairen Konditionen, vollständiger Transparenz und nachhaltiger Energieversorgung für Ihre Immobilie.",
+      "Mieterstrom neu gedacht. Mit fairMieterstrom schaffen Sie ein lukratives Investment ohne zusätzlichen Aufwand oder bürokratischen Albtraum.",
     images: ["https://cdn.prod.website-files.com/6851230f794c51bed168c638/68512d19b79e73d7ac83ae53_header-logo.webp"],
   },
 }

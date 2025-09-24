@@ -26,7 +26,7 @@ export function ProjekteSection() {
               onClick={() => setShowVideo(true)}
             >
               <img
-                src="https://cdn.prod.website-files.com/6851230f794c51bed168c638/68c0010c743d19ee77caa48b_Thumbnail.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/68c0010c743d19ee77caa48b_Thumbnail-sK3KOc4dNa1MyLVtc6RZOb5qVSxuSH.png"
                 alt="Video Thumbnail"
                 className="w-full h-full object-cover"
               />
