@@ -1,6 +1,34 @@
+"use client"
+
 import { Card } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { ExternalLink } from "lucide-react"
+import { useState, useEffect } from "react"
 
 export function AnsprechpartnerSection() {
+  const [calendlyLoaded, setCalendlyLoaded] = useState(true)
+  const [showCalendlyPopup, setShowCalendlyPopup] = useState(false)
+
+  useEffect(() => {
+    // Check if Calendly widget loaded after a delay
+    const timer = setTimeout(() => {
+      const calendlyWidget = document.querySelector(".calendly-inline-widget")
+      if (calendlyWidget && !calendlyWidget.querySelector("iframe")) {
+        setCalendlyLoaded(false)
+      }
+    }, 3000)
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  const openCalendlyPopup = () => {
+    window.open(
+      "https://calendly.com/pure-energy-germany/setter-call?hide_event_type_details=1&hide_gdpr_banner=1&background_color=ffffff&text_color=04252b&primary_color=77be21",
+      "_blank",
+      "width=800,height=700,scrollbars=yes,resizable=yes",
+    )
+  }
+
   return (
     <section id="kontakt" className="py-20 px-4 bg-gradient-to-br from-[#f3eee7] to-white">
       <div className="max-w-6xl mx-auto">
@@ -62,6 +90,18 @@ export function AnsprechpartnerSection() {
                 style={{ minWidth: "280px", height: "660px" }}
               />
               <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async />
+
+              {!calendlyLoaded && (
+                <div className="absolute inset-0 bg-white/90 backdrop-blur-sm flex items-center justify-center">
+                  <div className="text-center p-8">
+                    <p className="text-[#04252b] mb-4">Terminbuchung lädt nicht?</p>
+                    <Button onClick={openCalendlyPopup} className="bg-[#77be21] hover:bg-[#6ba01d] text-white">
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      Hier klicken für Popup
+                    </Button>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>

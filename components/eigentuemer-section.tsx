@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { TrendingUp, DollarSign, Shield } from "lucide-react"
@@ -72,6 +74,12 @@ export function EigentumerSection() {
           <Button
             size="lg"
             className="bg-[#77be21] hover:bg-[#77be21]/90 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            onClick={() => {
+              document.getElementById("kontakt")?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              })
+            }}
           >
             Beratungstermin direkt vereinbaren
           </Button>

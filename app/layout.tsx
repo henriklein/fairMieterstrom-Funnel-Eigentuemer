@@ -5,10 +5,11 @@ import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import Script from "next/script"
 import { Suspense } from "react"
+import { CookieBanner } from "@/components/cookie-banner"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "v0 App",
+  title: "fairMieterstrom für Eigentümer",
   description: "Created with v0",
   generator: "v0.app",
 }
@@ -46,6 +47,7 @@ export default function RootLayout({
         </noscript>
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
+        <CookieBanner />
       </body>
     </html>
   )
