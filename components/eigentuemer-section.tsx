@@ -10,19 +10,19 @@ export function EigentumerSection() {
       icon: TrendingUp,
       title: "Deutlich höhere Renditen",
       description:
-        "Durch vereinfachte Bürokratie, Abrechnung mit den Mietern und Installation, können unsere Kunden mit dem fairmieterstrom Modell deutlich höhere Renditen erreichen, ohne gleichzeitig starke Verpflichtungen gegenüber ihren Mietern zu haben.",
+        "Durch vereinfachte Bürokratie, Abrechnung mit den Mietern und Installation, können unsere Kunden mit dem fairMieterstrom Modell deutlich höhere Renditen erreichen, ohne gleichzeitig starke Verpflichtungen gegenüber ihren Mietern zu haben.",
     },
     {
       icon: DollarSign,
       title: "Geringe laufende Kosten",
       description:
-        "Das normale Mieterstrom-Modell kostet pro Jahr 50–75€/Mieter – fairmieterstrom nur 10€/Mieter pro Jahr, damit 5x günstiger als der Wettbewerb.",
+        'Das normale Mieterstrom-Modell kostet pro Jahr 50–75€/Mieter – <span className="font-bold text-[#77be21]">fairMieterstrom ist kostenlos</span>',
     },
     {
       icon: Shield,
       title: "Kein Mehraufwand",
       description:
-        "Mit fairmieterstrom entfällt jeglicher Verwaltungsaufwand. Von der Installation über den Betrieb bis zur Abrechnung wird alles übernommen – inklusive gesetzlicher Vorgaben und Fördermöglichkeiten. Eigentümer profitieren von einer Wertsteigerung ihrer Immobilie, ohne zusätzlichen Aufwand.",
+        "Mit fairMieterstrom entfällt jeglicher Verwaltungsaufwand. Von der Installation über den Betrieb bis zur Abrechnung wird alles übernommen – inklusive gesetzlicher Vorgaben und Fördermöglichkeiten. Eigentümer profitieren von einer Wertsteigerung ihrer Immobilie, ohne zusätzlichen Aufwand.",
     },
   ]
 
@@ -33,7 +33,7 @@ export function EigentumerSection() {
 
       <div className="max-w-6xl mx-auto relative">
         <h2 className="text-4xl font-bold text-center mb-16 text-balance">
-          Darum sind Eigentümer begeistert von <span className="text-[#074742]">fairmieterstrom</span>
+          Darum sind Eigentümer begeistert von <span className="text-[#074742]">fairMieterstrom</span>
         </h2>
 
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
@@ -57,7 +57,10 @@ export function EigentumerSection() {
                 <h3 className="text-xl font-semibold text-balance group-hover:text-[#074742] transition-colors duration-300">
                   {benefit.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
+                <p
+                  className="text-muted-foreground leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: benefit.description }}
+                />
               </div>
 
               <div

@@ -20,7 +20,7 @@ export function VergleichSection() {
     {
       category: "Laufende Kosten",
       traditional: "60–75€/Mieter pro Jahr",
-      plus: "10€/Mieter pro Jahr",
+      plus: "kostenfrei",
       traditionalIcon: X,
       plusIcon: Check,
     },
@@ -48,7 +48,7 @@ export function VergleichSection() {
             </div>
           </div>
           <h2 className="text-4xl font-bold text-white mb-4 text-balance">
-            Mieterstrom vs. <span className="text-[#77be21]">fairmieterstrom</span>
+            Mieterstrom vs. <span className="text-[#77be21]">fairMieterstrom</span>
           </h2>
           <p className="text-slate-300 text-lg">Der Unterschied, der den Unterschied macht</p>
         </div>
@@ -87,7 +87,7 @@ export function VergleichSection() {
             <div className="relative z-10">
               <h3 className="text-2xl font-semibold mb-8 text-center text-emerald-200 flex items-center justify-center gap-2">
                 <Check className="h-6 w-6 text-[#77be21]" />
-                <span className="text-[#77be21]">fairmieterstrom</span>
+                <span className="text-[#77be21]">fairMieterstrom</span>
               </h3>
               <div className="space-y-6">
                 {comparisons.map((item, index) => (

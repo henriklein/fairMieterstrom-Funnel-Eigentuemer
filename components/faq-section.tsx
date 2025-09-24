@@ -7,9 +7,9 @@ import { HelpCircle, Sparkles } from "lucide-react"
 export function FAQSection() {
   const faqs = [
     {
-      question: "Was ist fairmieterstrom?",
+      question: "Was ist fairMieterstrom?",
       answer:
-        "fairmieterstrom ist eine weiterentwickelte Form des herkömmlichen Mieterstroms, die bürokratische Hürden minimiert und höhere Renditen bei geringerem Aufwand ermöglicht.",
+        "fairMieterstrom ist eine weiterentwickelte Form des herkömmlichen Mieterstroms, die bürokratische Hürden minimiert und höhere Renditen bei geringerem Aufwand ermöglicht.",
     },
     {
       question: "Was ist Gemeinschaftliche Gebäudeversorgung?",
@@ -49,7 +49,7 @@ export function FAQSection() {
     {
       question: "Was habe ich davon?",
       answer:
-        "Sie erhalten bis zu 15% gesicherte Rendite, minimale laufende Kosten (nur 10€/Mieter/Jahr) und eine Wertsteigerung Ihrer Immobilie ohne Verwaltungsaufwand.",
+        "Sie erhalten bis zu 15% gesicherte Rendite, kostenfrei laufende Kosten und eine Wertsteigerung Ihrer Immobilie ohne Verwaltungsaufwand.",
     },
     {
       question: "Was haben meine Mieter davon?",
@@ -72,7 +72,7 @@ export function FAQSection() {
           </div>
           <h2 className="text-4xl font-bold text-center mb-4 text-balance">Noch Unsicher? Häufig gestellte Fragen</h2>
           <p className="text-muted-foreground text-lg">
-            Alle Antworten zu <span className="text-[#074742] font-semibold">fairmieterstrom</span>
+            Alle Antworten zu <span className="text-[#074742] font-semibold">fairMieterstrom</span>
           </p>
         </div>
 

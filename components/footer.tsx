@@ -8,7 +8,7 @@ export function Footer() {
           {/* Logo and Company Info */}
           <div className="space-y-4">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/68512d19b79e73d7ac83ae53_header-logo-MW6zFcQ9r0tvVvFtc46OaDybTkLyh8.webp"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/68512d19b79e73d7ac83ae53_header-logo-QrQxzMpim3coCG5xVrazq1F0Sz7bv6.webp"
               alt="Pure Energy Germany Logo"
               width={180}
               height={40}
