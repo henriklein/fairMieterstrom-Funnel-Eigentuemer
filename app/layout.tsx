@@ -10,8 +10,33 @@ import "./globals.css"
 
 export const metadata: Metadata = {
   title: "fairMieterstrom für Eigentümer",
-  description: "Created with v0",
+  description:
+    "Entdecken Sie fairMieterstrom - die transparente Alternative zu herkömmlichen Mieterstrom-Modellen. Profitieren Sie von fairen Konditionen, vollständiger Transparenz und nachhaltiger Energieversorgung für Ihre Immobilie.",
   generator: "v0.app",
+  openGraph: {
+    title: "fairMieterstrom für Eigentümer",
+    description:
+      "Entdecken Sie fairMieterstrom - die transparente Alternative zu herkömmlichen Mieterstrom-Modellen. Profitieren Sie von fairen Konditionen, vollständiger Transparenz und nachhaltiger Energieversorgung für Ihre Immobilie.",
+    url: "https://fairmieterstrom.pure-energy-germany.de",
+    siteName: "fairMieterstrom",
+    images: [
+      {
+        url: "https://cdn.prod.website-files.com/6851230f794c51bed168c638/68512d19b79e73d7ac83ae53_header-logo.webp",
+        width: 1200,
+        height: 630,
+        alt: "Pure Energy Germany Logo - fairMieterstrom",
+      },
+    ],
+    locale: "de_DE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "fairMieterstrom für Eigentümer",
+    description:
+      "Entdecken Sie fairMieterstrom - die transparente Alternative zu herkömmlichen Mieterstrom-Modellen. Profitieren Sie von fairen Konditionen, vollständiger Transparenz und nachhaltiger Energieversorgung für Ihre Immobilie.",
+    images: ["https://cdn.prod.website-files.com/6851230f794c51bed168c638/68512d19b79e73d7ac83ae53_header-logo.webp"],
+  },
 }
 
 export default function RootLayout({
