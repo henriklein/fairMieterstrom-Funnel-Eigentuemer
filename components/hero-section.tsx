@@ -11,18 +11,29 @@ export function HeroSection() {
   const [showFormPopup, setShowFormPopup] = useState(false)
 
   useEffect(() => {
+    const loadFilloutScript = () => {
+      if (document.querySelector('script[src="https://server.fillout.com/embed/v1/"]')) {
+        return
+      }
+
+      const script = document.createElement("script")
+      script.src = "https://server.fillout.com/embed/v1/"
+      script.async = true
+      document.head.appendChild(script)
+    }
+
+    loadFilloutScript()
+
     const checkFormLoad = () => {
-      const formElement = document.querySelector('[data-fillout-id="dRDAb6xPo2us"]')
+      const formElement = document.querySelector('[data-fillout-id="9BTwJ8oWWrus"]')
       if (formElement && formElement.children.length > 0) {
         setFormLoaded(true)
       }
     }
 
-    // Check immediately and then periodically
     checkFormLoad()
     const interval = setInterval(checkFormLoad, 1000)
 
-    // Stop checking after 10 seconds
     setTimeout(() => {
       clearInterval(interval)
       if (!formLoaded) {
@@ -146,18 +157,17 @@ export function HeroSection() {
                 <div
                   style={{
                     width: "100%",
-                    height: "650px",
-                    minHeight: "650px",
-                    maxHeight: "650px",
+                    height: "430px",
+                    minHeight: "430px",
+                    maxHeight: "430px",
                     overflow: "hidden",
                   }}
-                  className="sm:h-[650px] lg:h-[650px]"
-                  data-fillout-id="dRDAb6xPo2us"
+                  className="sm:h-[430px] lg:h-[430px]"
+                  data-fillout-id="9BTwJ8oWWrus"
                   data-fillout-embed-type="standard"
                   data-fillout-inherit-parameters
                   data-fillout-dynamic-resize
                 />
-                <script src="https://server.fillout.com/embed/v1/" async />
               </div>
             </Card>
           </div>
@@ -172,7 +182,7 @@ export function HeroSection() {
                   ✕
                 </button>
                 <iframe
-                  src="https://forms.fillout.com/t/dRDAb6xPo2us"
+                  src="https://forms.fillout.com/t/9BTwJ8oWWrus"
                   className="w-full h-[80vh]"
                   frameBorder="0"
                   title="Beratungsformular"
@@ -188,7 +198,6 @@ export function HeroSection() {
           </p>
           <div className="overflow-hidden">
             <div className="flex items-center space-x-8 lg:space-x-12 scroll-animation">
-              {/* First set of logos */}
               {partnerLogos.map((logo, index) => (
                 <div key={index} className="flex-shrink-0">
                   <Image
@@ -200,7 +209,6 @@ export function HeroSection() {
                   />
                 </div>
               ))}
-              {/* Duplicate set for seamless scrolling */}
               {partnerLogos.map((logo, index) => (
                 <div key={`duplicate-${index}`} className="flex-shrink-0">
                   <Image

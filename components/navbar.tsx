@@ -44,6 +44,12 @@ export function Navbar() {
               Vergleich
             </button>
             <button
+              onClick={() => scrollToSection("dienstleistungen")}
+              className="text-[#04252b] hover:text-[#77be21] transition-colors font-medium"
+            >
+              Dienstleistungen
+            </button>
+            <button
               onClick={() => scrollToSection("testimonial")}
               className="text-[#04252b] hover:text-[#77be21] transition-colors font-medium"
             >
@@ -83,6 +89,12 @@ export function Navbar() {
                 className="block px-3 py-2 text-[#04252b] hover:text-[#77be21] transition-colors font-medium w-full text-left"
               >
                 Vergleich
+              </button>
+              <button
+                onClick={() => scrollToSection("dienstleistungen")}
+                className="block px-3 py-2 text-[#04252b] hover:text-[#77be21] transition-colors font-medium w-full text-left"
+              >
+                Dienstleistungen
               </button>
               <button
                 onClick={() => scrollToSection("testimonial")}
