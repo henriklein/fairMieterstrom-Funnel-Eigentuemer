@@ -52,7 +52,7 @@ export function FoerderungenAnalyseSection() {
 
             <div className="max-w-4xl mx-auto">
               <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-09-29%20at%2016.47.42-ZdR3QLEOGL06UKhtCMbQLeW18r6f5c.png"
+                src="/images/design-mode/Screenshot%202025-09-29%20at%2016.47.42.png"
                 alt="Beispielprojekt mit Pure Energy Germany - 6 Wohneinheiten, 29,59 kWP PV-Anlage, 15,42% Rendite"
                 className="w-full rounded-xl shadow-lg"
               />
