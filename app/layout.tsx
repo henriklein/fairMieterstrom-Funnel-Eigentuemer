@@ -6,17 +6,12 @@ import { Suspense } from "react"
 import { CookieBanner } from "@/components/cookie-banner"
 import "./globals.css"
 
-import { Inter, Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
+import { Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
 
 // Initialize fonts
 V0_Font_Geist({ weight: ["100","200","300","400","500","600","700","800","900"] })
 V0_Font_Geist_Mono({ weight: ["100","200","300","400","500","600","700","800","900"] })
 V0_Font_Source_Serif_4({ weight: ["200","300","400","500","600","700","800","900"] })
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-})
 
 export const metadata: Metadata = {
   title: {
@@ -101,7 +96,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.variable} font-sans`}>
+      <body className="font-sans">
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-WBZTTZ66"

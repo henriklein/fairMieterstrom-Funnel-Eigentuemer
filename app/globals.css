@@ -38,7 +38,7 @@
   --sidebar-accent-foreground: #04252b;
   --sidebar-border: #e5e5e5;
   --sidebar-ring: #77be21;
-  --font-inter: "Inter", sans-serif; /* Added Inter font */
+  /* Removed Inter font reference, using system fonts */
 }
 
 .dark {
@@ -74,7 +74,7 @@
   --sidebar-accent-foreground: #f3eee7;
   --sidebar-border: #2a4a52;
   --sidebar-ring: #77be21;
-  --font-inter: "Inter", sans-serif; /* Added Inter font */
+  /* Removed Inter font reference, using system fonts */
 }
 
 @theme inline {
@@ -115,8 +115,8 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* Simplified font configuration to use only Inter */
-  --font-sans: var(--font-inter);
+  /* Updated to use system fonts as failsafe */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 @layer base {
@@ -134,7 +134,8 @@ html {
 
 body {
   font-feature-settings: "rlig" 1, "calt" 1;
-  font-family: var(--font-sans); /* Updated font family */
+  /* Updated to use system fonts */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 /* Added scrolling animation for partner logos */
