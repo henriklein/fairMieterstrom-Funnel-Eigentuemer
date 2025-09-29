@@ -21,16 +21,26 @@ export function Footer() {
               <p className="text-[#77be21] font-medium text-lg">Mieterstrom neu gedacht</p>
             </div>
 
-            {/* Funnel Pages */}
+            {/* Für Mieter */}
             <div className="space-y-4">
-              <h4 className="font-semibold text-[#77be21]">Funnel Pages</h4>
+              <h4 className="font-semibold text-[#77be21]">Für Mieter</h4>
               <div className="space-y-2">
                 <a href="/mieter" className="block text-[#f3eee7]/70 hover:text-[#77be21] transition-colors">
-                  Für Mieter
+                  Mieterstrom Info
                 </a>
                 <a href="/mieter/onboarding" className="block text-[#f3eee7]/70 hover:text-[#77be21] transition-colors">
                   Mieter Onboarding
                 </a>
+                <a href="/berechner" className="block text-[#f3eee7]/70 hover:text-[#77be21] transition-colors">
+                  Ersparnis Berechner
+                </a>
+              </div>
+            </div>
+
+            {/* Für Eigentümer */}
+            <div className="space-y-4">
+              <h4 className="font-semibold text-[#77be21]">Für Eigentümer</h4>
+              <div className="space-y-2">
                 <a
                   href="/beratungsgespraech"
                   className="block text-[#f3eee7]/70 hover:text-[#77be21] transition-colors"
@@ -40,13 +50,12 @@ export function Footer() {
                 <a href="/infomaterial" className="block text-[#f3eee7]/70 hover:text-[#77be21] transition-colors">
                   Infomaterial
                 </a>
-                <a href="/berechner" className="block text-[#f3eee7]/70 hover:text-[#77be21] transition-colors">
-                  Berechner
+                <a href="/foerderungen" className="block text-[#f3eee7]/70 hover:text-[#77be21] transition-colors">
+                  Förderungen
                 </a>
               </div>
             </div>
 
-            {/* Navigation Links */}
             <div className="space-y-4">
               <h4 className="font-semibold text-[#77be21]">Navigation</h4>
               <div className="space-y-2">
@@ -76,41 +85,38 @@ export function Footer() {
                 </a>
               </div>
             </div>
-
-            {/* Legal Links */}
-            <div className="space-y-4">
-              <h4 className="font-semibold text-[#77be21]">Rechtliches</h4>
-              <div className="space-y-2">
-                <a
-                  href="https://www.pure-energy-germany.de/impressum"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-[#f3eee7]/70 hover:text-[#77be21] transition-colors"
-                >
-                  Impressum
-                </a>
-                <a
-                  href="https://www.pure-energy-germany.de/datenschutz"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-[#f3eee7]/70 hover:text-[#77be21] transition-colors"
-                >
-                  Datenschutz
-                </a>
-                <a
-                  href="https://www.pure-energy-germany.de/agbs"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-[#f3eee7]/70 hover:text-[#77be21] transition-colors"
-                >
-                  AGBs
-                </a>
-              </div>
-            </div>
           </div>
 
-          <div className="pt-8 border-t border-[#f3eee7]/20 text-center text-[#f3eee7]/70">
-            <p>&copy; Pure Energy Germany 2025 - eine Marke der Oskomera GmbH</p>
+          <div className="pt-8 border-t border-[#f3eee7]/20 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-[#f3eee7]/70">&copy; 2025 - eine Marke der Oskomera GmbH</p>
+            <div className="flex gap-4 text-[#f3eee7]/70">
+              <a
+                href="https://www.pure-energy-germany.de/impressum"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#77be21] transition-colors"
+              >
+                Impressum
+              </a>
+              <span>|</span>
+              <a
+                href="https://www.pure-energy-germany.de/datenschutz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#77be21] transition-colors"
+              >
+                Datenschutz
+              </a>
+              <span>|</span>
+              <a
+                href="https://www.pure-energy-germany.de/agbs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#77be21] transition-colors"
+              >
+                AGBs
+              </a>
+            </div>
           </div>
         </div>
       </div>
