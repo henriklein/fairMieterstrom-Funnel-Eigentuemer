@@ -6,17 +6,29 @@ import { Suspense } from "react"
 import { CookieBanner } from "@/components/cookie-banner"
 import "./globals.css"
 
+import { Geist, Geist_Mono, Source_Serif_4, Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
+
+// Initialize fonts
+V0_Font_Geist({ weight: ["100","200","300","400","500","600","700","800","900"] })
+V0_Font_Geist_Mono({ weight: ["100","200","300","400","500","600","700","800","900"] })
+V0_Font_Source_Serif_4({ weight: ["200","300","400","500","600","700","800","900"] })
+
 const geist = Geist({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-geist-sans",
 })
+
 const geistMono = Geist_Mono({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-geist-mono",
 })
+
 const sourceSerif = Source_Serif_4({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-source-serif",
 })
 
 export const metadata: Metadata = {

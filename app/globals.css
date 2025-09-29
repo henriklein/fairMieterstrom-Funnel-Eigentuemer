@@ -38,6 +38,9 @@
   --sidebar-accent-foreground: #04252b;
   --sidebar-border: #e5e5e5;
   --sidebar-ring: #77be21;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-source-serif);
 }
 
 .dark {
@@ -73,6 +76,9 @@
   --sidebar-accent-foreground: #f3eee7;
   --sidebar-border: #2a4a52;
   --sidebar-ring: #77be21;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-source-serif);
 }
 
 @theme inline {
