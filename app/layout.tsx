@@ -5,12 +5,18 @@ import Script from "next/script"
 import { Suspense } from "react"
 import { CookieBanner } from "@/components/cookie-banner"
 import "./globals.css"
+
+import { Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
 import { Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
 
 // Initialize fonts
 V0_Font_Geist({ weight: ["100","200","300","400","500","600","700","800","900"] })
 V0_Font_Geist_Mono({ weight: ["100","200","300","400","500","600","700","800","900"] })
 V0_Font_Source_Serif_4({ weight: ["200","300","400","500","600","700","800","900"] })
+
+const geistFont = V0_Font_Geist({ weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"] })
+const geistMonoFont = V0_Font_Geist_Mono({ weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"] })
+const sourceSerifFont = V0_Font_Source_Serif_4({ weight: ["200", "300", "400", "500", "600", "700", "800", "900"] })
 
 export const metadata: Metadata = {
   title: {
@@ -95,7 +101,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="font-sans">
+      <body className={`font-sans ${geistFont.variable} ${geistMonoFont.variable}`}>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-WBZTTZ66"
