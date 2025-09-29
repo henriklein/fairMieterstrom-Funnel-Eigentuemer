@@ -1,17 +1,46 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import Script from "next/script"
 import { Suspense } from "react"
 import { CookieBanner } from "@/components/cookie-banner"
 import "./globals.css"
 
+import { Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
+import { Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
+
+// Initialize fonts
+V0_Font_Geist({ weight: ["100","200","300","400","500","600","700","800","900"] })
+V0_Font_Geist_Mono({ weight: ["100","200","300","400","500","600","700","800","900"] })
+V0_Font_Source_Serif_4({ weight: ["200","300","400","500","600","700","800","900"] })
+
+const geistFont = V0_Font_Geist({ weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"] })
+const geistMonoFont = V0_Font_Geist_Mono({ weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"] })
+const sourceSerifFont = V0_Font_Source_Serif_4({ weight: ["200", "300", "400", "500", "600", "700", "800", "900"] })
+
 export const metadata: Metadata = {
-  title: "fairMieterstrom für Eigentümer",
+  title: {
+    default: "fairMieterstrom für Eigentümer - Mieterstrom neu gedacht",
+    template: "%s | fairMieterstrom",
+  },
   description:
-    "Mieterstrom neu gedacht. Mit fairMieterstrom schaffen Sie ein lukratives Investment ohne zusätzlichen Aufwand oder bürokratischen Albtraum.",
+    "Mieterstrom neu gedacht. Mit fairMieterstrom schaffen Sie ein lukratives Investment ohne zusätzlichen Aufwand oder bürokratischen Albtraum. Bis zu 15% gesicherte Rendite.",
+  keywords:
+    "Mieterstrom, PV-Anlage, Mehrfamilienhaus, Solarenergie, Rendite, fairMieterstrom, Pure Energy Germany, Eigentümer, Vermieter",
+  authors: [{ name: "Pure Energy Germany" }],
+  creator: "Pure Energy Germany",
+  publisher: "Pure Energy Germany",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   generator: "v0.app",
   icons: {
     icon: "/favicon.png",
@@ -19,9 +48,9 @@ export const metadata: Metadata = {
     apple: "/favicon.png",
   },
   openGraph: {
-    title: "fairMieterstrom für Eigentümer",
+    title: "fairMieterstrom für Eigentümer - Mieterstrom neu gedacht",
     description:
-      "Mieterstrom neu gedacht. Mit fairMieterstrom schaffen Sie ein lukratives Investment ohne zusätzlichen Aufwand oder bürokratischen Albtraum.",
+      "Mieterstrom neu gedacht. Mit fairMieterstrom schaffen Sie ein lukratives Investment ohne zusätzlichen Aufwand oder bürokratischen Albtraum. Bis zu 15% gesicherte Rendite.",
     url: "https://fairmieterstrom.pure-energy-germany.de",
     siteName: "fairMieterstrom",
     images: [
@@ -37,10 +66,16 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "fairMieterstrom für Eigentümer",
+    title: "fairMieterstrom für Eigentümer - Mieterstrom neu gedacht",
     description:
-      "Mieterstrom neu gedacht. Mit fairMieterstrom schaffen Sie ein lukratives Investment ohne zusätzlichen Aufwand oder bürokratischen Albtraum.",
+      "Mieterstrom neu gedacht. Mit fairMieterstrom schaffen Sie ein lukratives Investment ohne zusätzlichen Aufwand oder bürokratischen Albtraum. Bis zu 15% gesicherte Rendite.",
     images: ["https://cdn.prod.website-files.com/6851230f794c51bed168c638/68512d19b79e73d7ac83ae53_header-logo.webp"],
+  },
+  alternates: {
+    canonical: "https://fairmieterstrom.pure-energy-germany.de",
+  },
+  verification: {
+    google: "your-google-verification-code", // Replace with actual verification code
   },
 }
 
@@ -66,7 +101,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+      <body className={`font-sans ${geistFont.variable} ${geistMonoFont.variable}`}>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-WBZTTZ66"

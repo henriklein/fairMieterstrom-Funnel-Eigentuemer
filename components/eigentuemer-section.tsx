@@ -91,3 +91,5 @@ export function EigentumerSection() {
     </section>
   )
 }
+
+export { EigentumerSection as EigentuemerSection }

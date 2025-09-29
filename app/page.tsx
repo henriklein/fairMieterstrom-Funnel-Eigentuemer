@@ -9,10 +9,19 @@ import { ProjekteSection } from "@/components/projekte-section"
 import { AnsprechpartnerSection } from "@/components/ansprechpartner-section"
 import { FAQSection } from "@/components/faq-section"
 import { Footer } from "@/components/footer"
+import { StructuredData } from "@/components/structured-data"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://fairmieterstrom.pure-energy-germany.de",
+  },
+}
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f3eee7]">
+      <StructuredData type="homepage" />
       <Navbar />
       <ScrollProgress />
       <div id="hero">

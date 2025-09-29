@@ -126,3 +126,5 @@ export function FAQSection() {
     </section>
   )
 }
+
+export { FAQSection as FaqSection }
