@@ -6,12 +6,11 @@ import { Suspense } from "react"
 import { CookieBanner } from "@/components/cookie-banner"
 import "./globals.css"
 
-import { Geist, Geist_Mono, Source_Serif_4, Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
-
-// Initialize fonts
-V0_Font_Geist({ weight: ["100","200","300","400","500","600","700","800","900"] })
-V0_Font_Geist_Mono({ weight: ["100","200","300","400","500","600","700","800","900"] })
-V0_Font_Source_Serif_4({ weight: ["200","300","400","500","600","700","800","900"] })
+import {
+  Poppins as Geist,
+  Noto_Sans_Mono as Geist_Mono,
+  Source_Serif_4,
+} from "next/font/google"
 
 const geist = Geist({
   subsets: ["latin"],
