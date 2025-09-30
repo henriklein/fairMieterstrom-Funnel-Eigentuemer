@@ -1,53 +1,30 @@
 import { Navbar } from "@/components/navbar"
-import { ScrollProgress } from "@/components/scroll-progress"
 import { HeroSection } from "@/components/hero-section"
-import { WeiterentwicklungSection } from "@/components/weiterentwicklung-section"
-import { EigentumerSection } from "@/components/eigentuemer-section"
-import { VergleichSection } from "@/components/vergleich-section"
-import { DienstleistungenSection } from "@/components/dienstleistungen-section"
-import { ProjekteSection } from "@/components/projekte-section"
-import { AnsprechpartnerSection } from "@/components/ansprechpartner-section"
+import { LogoCarousel } from "@/components/logo-carousel"
+import { MieterstromConceptSection } from "@/components/mieterstrom-concept-section"
+import { BenefitsSection } from "@/components/benefits-section"
+import { PowerTowerSection } from "@/components/powertower-section"
+import { ProjectsSlideshow } from "@/components/projects-slideshow"
+import { ImplementationVideoSection } from "@/components/implementation-video-section"
+import { TeamServicesSection } from "@/components/team-services-section"
+import { FinalCTA } from "@/components/final-cta"
 import { FAQSection } from "@/components/faq-section"
 import { Footer } from "@/components/footer"
-import { StructuredData } from "@/components/structured-data"
-import type { Metadata } from "next"
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "https://fairmieterstrom.pure-energy-germany.de",
-  },
-}
-
-export default function Home() {
+export default function Page() {
   return (
-    <main className="min-h-screen bg-[#f3eee7]">
-      <StructuredData type="homepage" />
+    <main className="min-h-screen">
       <Navbar />
-      <ScrollProgress />
-      <div id="hero">
-        <HeroSection />
-      </div>
-      <div id="features">
-        <WeiterentwicklungSection />
-      </div>
-      <div id="eigentuemer">
-        <EigentumerSection />
-      </div>
-      <div id="vergleich">
-        <VergleichSection />
-      </div>
-      <div id="dienstleistungen">
-        <DienstleistungenSection />
-      </div>
-      <div id="testimonial">
-        <ProjekteSection />
-      </div>
-      <div id="kontakt">
-        <AnsprechpartnerSection />
-      </div>
-      <div id="faq">
-        <FAQSection />
-      </div>
+      <HeroSection />
+      <LogoCarousel />
+      <MieterstromConceptSection />
+      <BenefitsSection />
+      <PowerTowerSection />
+      <ProjectsSlideshow />
+      <ImplementationVideoSection />
+      <TeamServicesSection />
+      <FinalCTA />
+      <FAQSection />
       <Footer />
     </main>
   )
