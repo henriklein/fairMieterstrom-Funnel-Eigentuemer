@@ -66,7 +66,7 @@ export function ComparisonSection() {
             </div>
 
             {/* Klassische Vollversorgung */}
-            <div className="glass-card rounded-3xl p-8 md:p-10 border-2 border-border hover-lift shadow-xl">
+            <div className="glass-card rounded-3xl p-8 md:p-10 border-2 hover-lift shadow-xl">
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-muted to-muted/80 flex items-center justify-center text-3xl">
                   ⚙️
