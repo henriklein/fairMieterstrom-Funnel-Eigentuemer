@@ -1,29 +1,8 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import Script from "next/script"
 
 export function ImplementationVideoSection() {
-  const videoContainerRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    // Load Wistia scripts
-    const playerScript = document.createElement("script")
-    playerScript.src = "https://fast.wistia.com/player.js"
-    playerScript.async = true
-    document.body.appendChild(playerScript)
-
-    const embedScript = document.createElement("script")
-    embedScript.src = "https://fast.wistia.com/embed/4oqp8khmfa.js"
-    embedScript.async = true
-    embedScript.type = "module"
-    document.body.appendChild(embedScript)
-
-    return () => {
-      document.body.removeChild(playerScript)
-      document.body.removeChild(embedScript)
-    }
-  }, [])
-
   return (
     <section className="py-16 md:py-24 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -42,22 +21,30 @@ export function ImplementationVideoSection() {
           {/* Right video */}
           <div className="flex justify-center md:justify-end">
             <div
-              ref={videoContainerRef}
               className="relative rounded-2xl overflow-hidden bg-muted border border-white/10 shadow-2xl"
               style={{ width: "350px", height: "622px" }}
             >
-              <style>{`
-                wistia-player[media-id='4oqp8khmfa']:not(:defined) {
-                  background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/4oqp8khmfa/swatch');
-                  display: block;
-                  filter: blur(5px);
-                }
-              `}</style>
-              <wistia-player media-id="4oqp8khmfa" aspect="0.5625" style={{ width: "100%", height: "100%" }} />
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    <style>
+                      wistia-player[media-id='4oqp8khmfa']:not(:defined) {
+                        background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/4oqp8khmfa/swatch');
+                        display: block;
+                        filter: blur(5px);
+                      }
+                    </style>
+                    <wistia-player media-id="4oqp8khmfa" aspect="0.5625" style="width: 100%; height: 100%;"></wistia-player>
+                  `,
+                }}
+              />
             </div>
           </div>
         </div>
       </div>
+
+      <Script src="https://fast.wistia.com/player.js" strategy="lazyOnload" />
+      <Script src="https://fast.wistia.com/embed/4oqp8khmfa.js" strategy="lazyOnload" type="module" />
     </section>
   )
 }
