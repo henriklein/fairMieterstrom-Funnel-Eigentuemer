@@ -36,7 +36,7 @@ export function ProblemSolutionSection() {
 
           <div className="space-y-8">
             {problems.map((item, index) => (
-              <div key={index} className="bg-card rounded-lg shadow-md p-6 md:p-8 border border-border">
+              <div key={index} className="bg-card rounded-lg shadow-md p-6 md:p-8 border">
                 <div className="grid md:grid-cols-2 gap-6">
                   {/* Problem */}
                   <div className="space-y-3">
@@ -48,7 +48,7 @@ export function ProblemSolutionSection() {
                   </div>
 
                   {/* Solution */}
-                  <div className="space-y-3 md:border-l md:border-border md:pl-6">
+                  <div className="space-y-3 md:border-l md:pl-6">
                     <div className="flex items-start gap-3">
                       <span className="text-primary text-2xl leading-none">✓</span>
                       <h3 className="text-xl font-semibold text-primary">{item.solution}</h3>

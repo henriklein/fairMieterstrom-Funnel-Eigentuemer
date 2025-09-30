@@ -9,15 +9,15 @@ export function VisionSection() {
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 pt-8">
-            <div className="bg-card p-6 rounded-lg shadow-sm border border-border">
+            <div className="bg-card p-6 rounded-lg shadow-sm border">
               <h3 className="text-lg font-semibold text-foreground mb-3">Energiewende vorantreiben</h3>
               <p className="text-muted-foreground">Gemeinsam gestalten wir eine nachhaltige Zukunft</p>
             </div>
-            <div className="bg-card p-6 rounded-lg shadow-sm border border-border">
+            <div className="bg-card p-6 rounded-lg shadow-sm border">
               <h3 className="text-lg font-semibold text-foreground mb-3">Einfachen Zugang schaffen</h3>
               <p className="text-muted-foreground">Mieterstrom für jeden zugänglich machen</p>
             </div>
-            <div className="bg-card p-6 rounded-lg shadow-sm border border-border">
+            <div className="bg-card p-6 rounded-lg shadow-sm border">
               <h3 className="text-lg font-semibold text-foreground mb-3">Nachhaltigkeit verbinden</h3>
               <p className="text-muted-foreground">Wirtschaftlichkeit und Komfort in Einklang bringen</p>
             </div>
