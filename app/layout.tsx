@@ -96,7 +96,7 @@ export default function RootLayout({
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
               j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-WBZTTZ66');
+              })(window,document,'script','dataLayer','GTM-PCGMK98R');
             `,
           }}
         />
@@ -106,7 +106,7 @@ export default function RootLayout({
       >
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-WBZTTZ66"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PCGMK98R"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}

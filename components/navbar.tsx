@@ -23,7 +23,7 @@ export function Navbar() {
           <div className="flex items-center">
             <Link href="/">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/68512d19b79e73d7ac83ae53_header-logo-QrQxzMpim3coCG5xVrazq1F0Sz7bv6.webp"
+                src="/images/design-mode/68512d19b79e73d7ac83ae53_header-logo(1).webp"
                 alt="Pure Energy Germany Logo"
                 width={180}
                 height={40}
