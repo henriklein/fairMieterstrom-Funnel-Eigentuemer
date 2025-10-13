@@ -167,6 +167,7 @@ export function HeroSection() {
                   data-fillout-embed-type="standard"
                   data-fillout-inherit-parameters
                   data-fillout-dynamic-resize
+                  data-fillout-redirect-url={`${typeof window !== "undefined" ? window.location.origin : ""}/danke`}
                 />
               </div>
             </Card>

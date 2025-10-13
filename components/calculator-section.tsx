@@ -114,6 +114,7 @@ export function CalculatorSection() {
                 data-fillout-embed-type="standard"
                 data-fillout-inherit-parameters
                 data-fillout-dynamic-resize
+                data-fillout-redirect-url={`${typeof window !== "undefined" ? window.location.origin : ""}/danke`}
               />
 
               <p className="text-sm text-[#04252b]/70 text-center">

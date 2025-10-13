@@ -6,16 +6,30 @@ import { Suspense } from "react"
 import { CookieBanner } from "@/components/cookie-banner"
 import "./globals.css"
 
-import { GeistSans as V0_Font_Geist } from "geist/font/sans"
-import { GeistMono as V0_Font_Geist_Mono } from "geist/font/mono"
-import { Source_Serif_4 as V0_Font_Source_Serif_4 } from "next/font/google"
+import { Geist, Geist_Mono, Source_Serif_4, Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
 
-const geistFont = V0_Font_Geist
-const geistMonoFont = V0_Font_Geist_Mono
-const sourceSerifFont = V0_Font_Source_Serif_4({
-  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
+// Initialize fonts
+const _geist = V0_Font_Geist({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"], variable: '--v0-font-geist' })
+const _geistMono = V0_Font_Geist_Mono({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"], variable: '--v0-font-geist-mono' })
+const _sourceSerif_4 = V0_Font_Source_Serif_4({ subsets: ['latin'], weight: ["200","300","400","500","600","700","800","900"], variable: '--v0-font-source-serif-4' })
+const _v0_fontVariables = `${_geist.variable} ${_geistMono.variable} ${_sourceSerif_4.variable}`
+
+const geist = Geist({
   subsets: ["latin"],
-  variable: "--font-source-serif-4",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-geist",
+})
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-geist-mono",
+})
+
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-source-serif",
 })
 
 export const metadata: Metadata = {
@@ -96,17 +110,15 @@ export default function RootLayout({
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
               j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-PCGMK98R');
+              })(window,document,'script','dataLayer','GTM-WBZTTZ66');
             `,
           }}
         />
       </head>
-      <body
-        className={`font-sans ${geistFont.variable} ${geistMonoFont.variable} ${sourceSerifFont.variable}`}
-      >
+      <body className={`font-sans ${geist.variable} ${geistMono.variable} ${sourceSerif.variable} ${_v0_fontVariables}`}>
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-PCGMK98R"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-WBZTTZ66"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
