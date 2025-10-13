@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer className="bg-muted/30 border-t border-border py-12">
+    <footer className="bg-muted/30 border-t py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center gap-6">
           <Image src="/images/weess-logo.png" alt="WEESS Logo" width={100} height={35} className="h-8 w-auto" />
