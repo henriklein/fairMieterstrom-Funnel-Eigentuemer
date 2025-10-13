@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     title: "fairMieterstrom für Eigentümer - Mieterstrom neu gedacht",
     description:
       "Mieterstrom neu gedacht. Mit fairMieterstrom schaffen Sie ein lukratives Investment ohne zusätzlichen Aufwand oder bürokratischen Albtraum. Bis zu 15% gesicherte Rendite.",
-    url: "https://fairmieterstrom.pure-energy-germany.de",
+    url: "https://fairmieterstrom.energy",
     siteName: "fairMieterstrom",
     images: [
       {
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     images: ["https://cdn.prod.website-files.com/6851230f794c51bed168c638/68512d19b79e73d7ac83ae53_header-logo.webp"],
   },
   alternates: {
-    canonical: "https://fairmieterstrom.pure-energy-germany.de",
+    canonical: "https://fairmieterstrom.energy",
   },
   verification: {
     google: "your-google-verification-code", // Replace with actual verification code
