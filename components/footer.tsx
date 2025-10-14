@@ -23,25 +23,16 @@ export function Footer() {
 
             {/* Funnel Pages */}
             <div className="space-y-4">
-              <h4 className="font-semibold text-[#77be21]">Funnel Pages</h4>
+              <h4 className="font-semibold text-[#77be21]">Seiten</h4>
               <div className="space-y-2">
-                <a href="/mieter" className="block text-[#f3eee7]/70 hover:text-[#77be21] transition-colors">
-                  Für Mieter
-                </a>
-                <a href="/mieter/onboarding" className="block text-[#f3eee7]/70 hover:text-[#77be21] transition-colors">
-                  Mieter Onboarding
+                <a href="/" className="block text-[#f3eee7]/70 hover:text-[#77be21] transition-colors">
+                  Startseite
                 </a>
                 <a
-                  href="/beratungsgespraech"
+                  href="/landing-renditenrechner-mieterstrom"
                   className="block text-[#f3eee7]/70 hover:text-[#77be21] transition-colors"
                 >
-                  Beratungsgespräch
-                </a>
-                <a href="/infomaterial" className="block text-[#f3eee7]/70 hover:text-[#77be21] transition-colors">
-                  Infomaterial
-                </a>
-                <a href="/berechner" className="block text-[#f3eee7]/70 hover:text-[#77be21] transition-colors">
-                  Berechner
+                  Mieterstrom, aber stressfrei!
                 </a>
               </div>
             </div>
