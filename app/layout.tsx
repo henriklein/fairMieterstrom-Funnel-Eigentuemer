@@ -6,7 +6,7 @@ import { Suspense } from "react"
 import { CookieBanner } from "@/components/cookie-banner"
 import "./globals.css"
 
-import { GeistSans, GeistMono as GeistMonoFont } from "geist/font"
+import { GeistSans, GeistMono } from "geist/font"
 
 import { Source_Serif_4, Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
 
@@ -15,9 +15,6 @@ const _geist = V0_Font_Geist({ subsets: ['latin'], weight: ["100","200","300","4
 const _geistMono = V0_Font_Geist_Mono({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"], variable: '--v0-font-geist-mono' })
 const _sourceSerif_4 = V0_Font_Source_Serif_4({ subsets: ['latin'], weight: ["200","300","400","500","600","700","800","900"], variable: '--v0-font-source-serif-4' })
 const _v0_fontVariables = `${_geist.variable} ${_geistMono.variable} ${_sourceSerif_4.variable}`
-
-const geist = GeistSans
-const geistMono = GeistMonoFont
 
 const sourceSerif = Source_Serif_4({
   subsets: ["latin"],
@@ -108,7 +105,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`font-sans ${geist.variable} ${geistMono.variable} ${sourceSerif.variable} ${_v0_fontVariables}`}>
+      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${sourceSerif.variable} ${_v0_fontVariables}`}>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-PCGMK98R"
